@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Trader</title>
+</head>
+<body>
+    <h3>What do you want to do?</h3>
+
+    <form action="/action_router/" method="post">
+        <input type="radio" name="action" value="buy_stock"> Buy Stock<br>
+        <input type="radio" name="action" value="sell_stock"> Sell Stock<br>
+        <input type="radio" name="action" value="cash"> +/- Cash<br>
+        <input type="radio" name="action" value="ticker_info"> Ticker Info<br>
+        <input type="radio" name="action" value="positions"> Show Positions<br>
+        <br><br>
+        <button name="btn_submit" type="submit">Submit</button>
+        <input type="hidden" name="login_id" value="{{ login_id }}">
+    </form>
+
+    <p>
+        <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become unchecked.
+        <br>
+    </p>
+
+</body>
+</html>

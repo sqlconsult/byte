@@ -1,0 +1,40 @@
+
+# https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment
+
+###
+### Install nodejs
+###
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+###
+### check installation
+###
+# node -v
+# npm -v
+
+###
+### open port 8000
+###
+firewall-cmd --list-all
+sudo firewall-cmd --add-port 8000/tcp --permanent
+sudo firewall-cmd --reload
+
+###
+### see if any processes listening on port 8000
+###
+sudo netstat -tnlp | grep :8000
+ss -tnlp | grep :8000
+
+###
+### connect using server ip address *NOT* 127.0.0.1
+###
+# http://162.243.175.210:8000/
+
+# generates an Express application "skeleton"
+npm install eslint --save-dev
+npm install express-generator -g
+
+
+express helloworld
+DEBUG=helloworld:* npm start

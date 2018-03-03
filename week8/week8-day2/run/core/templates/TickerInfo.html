@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Trader</title>
+</head>
+
+
+<body>
+    <h3>Ticker Info</h3>
+
+    <form action="/TickerInfo" method="post">
+        <input name="ticker"     placeholder="Ticker"     type="text"><br>
+        <input name="company"    placeholder="Company"    type="text"><br>
+        <input type="submit"     value="Get Ticker or Company"><br><br>
+        <input type="hidden" name="login_id" value="{{ login_id }}">
+    </form>
+</body>
+</html>

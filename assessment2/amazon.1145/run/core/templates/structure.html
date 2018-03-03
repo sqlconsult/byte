@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steves Shop</title>
+</head>
+<body>
+    <h1>Steves Shop</h1>
+    <form action="/structure/router" method="post">
+        <h3>Department:</h3>
+        <select name="select_department" >
+            <option selected="selected" value="none">Select an option…</option>
+            <option value="automotive">Automotive</option>
+            <option value="beauty">Beauty</option>
+            <option value="books">Books</option>
+            <option value="clothing">Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="food">Food</option>
+            <option value="handmade">Handmade</option>
+            <option value="home">Home</option>
+            <option value="movies">Movies</option>
+            <option value="sports">Sports</option>
+            <option value="toys">Toys</option>
+            <option value="structure">Structure</option>
+        </select>
+        <button type="submit" class="btn btn-default">Go</button>
+    </form>
+    {% block main %}
+    {% endblock main %}
+</body>
+</html>

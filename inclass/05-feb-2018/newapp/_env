@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+source ~/byte/inclass/05-feb-2018/newapp/venv/bin/activate

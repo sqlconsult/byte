@@ -1,0 +1,11 @@
+books
+electronics
+movies
+home
+food
+beauty
+toys
+clothing
+handmade
+sports
+automotive

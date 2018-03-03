@@ -1,0 +1,29 @@
+import sys
+
+
+def diagonalDifference(a):
+    # Complete this function
+
+    n = len(a)
+    sum_first_diagonal = sum(a[i][i] for i in range(n))
+    sum_second_diagonal = sum(a[n - i - 1][n - i - 1] for i in range(n))
+
+    # sum1 = 0
+    # for i in range(len(a)):
+    #     for j in range(len(a[i])):
+    #         if(i == j): sum1 = sum1 + a[i][j]
+    #         print(a[i][j], end=' ')
+    #     print()
+    # return sum1
+
+
+# Define a main() function that prints a little greeting
+def main():
+    a = [ [11, 2, 4], [4, 5, 6], [10, 8, -12] ]
+    result = diagonalDifference(a)
+    print(result)
+
+
+# This is the standard boilerplate that calls main() function
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Trader</title>
+</head>
+    <body>
+        <div>
+            <h3>Add or Remove Cash</h3>
+            <form action="/Cash" method="post">
+                <input name="cash_amount" placeholder="+/- Cash Amount" type="number">
+                <input type="submit" value="Submit">
+                <input type="hidden" name="login_id" value="{{ login_id }}">
+            </form>
+        </div>
+    </body>
+</html>

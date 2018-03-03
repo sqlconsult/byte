@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Trader</title>
+</head>
+    <body>
+        <div>
+            <h3>{{ header_to_show }}</h3>
+            <form action="/DisplayResults" method="post">
+                <h4>{{ msg_to_show }}</h4>
+                <input type="submit" value="Submit">
+                <input type="hidden" name="login_id" value="{{ login_id }}">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer 31fea599c8c3fc1ddca556cb2924268227e2188cae0a9dd2fcd1bfd8c2088d9f -d '{"name":"node", "region":"nyc1", "size":"1gb", "image":"ubuntu-16-04-x64", "ssh_keys":[SSH_KEY_ID], "backups":false, "ipv6":false, "user_data":null, "private_networking":null, "tags":[test]}' "https://api.digitalocean.com/v2/droplets"
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer 31fea599c8c3fc1ddca556cb2924268227e2188cae0a9dd2fcd1bfd8c2088d9f" "https://api.digitalocean.com/v2/account/keys"
+
+curl -X DELETE -H  "Content-Type: application/json" -H "Authorization: Bearer 31fea599c8c3fc1ddca556cb2924268227e2188cae0a9dd2fcd1bfd8c2088d9f" "https://api.digitalocean.com/v2/droplets?tag_name=test"

@@ -1,0 +1,15 @@
+{
+  "name": "chatroom",
+  "version": "0.0.1",
+  "description": "Chatbot inclass socket exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.4"
+  }
+}

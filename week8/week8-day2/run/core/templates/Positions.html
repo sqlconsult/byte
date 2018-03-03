@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Terminal Trader</title>
+    </head>
+    <body>
+        <h3>Positions</h3>
+
+        <form action="/Positions" method="post">
+            <input type="hidden" name="login_id" value="{{ login_id }}">
+            <table class="centered thick-border">
+                <tr>
+                     <th>Id</th>
+                     <th>Initial Cash</th>
+                     <th>Cash Left</th>
+                     <th>Ticker</th>
+                     <th>Aggregate Balance</th>
+                     <th>Shares</th>
+                </tr>
+
+                {% for key, value in data.items() %}
+                    <tr>
+                        <td>{{ value[0] }}</td>
+                        <td>{{ value[1] }}</td>
+                        <td>{{ value[2] }}</td>
+                        <td>{{ value[3] }}</td>
+                        <td>{{ value[4] }}</td>
+                        <td>{{ value[5] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <br><br>
+            <input type="submit" value="Done">
+        </form>
+    </body>
+</html>
