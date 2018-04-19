@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import os
 import requests
-import xmltodict        # sudo pip install xmltodict
+from xml.etree import ElementTree
 
 
 def download_file(link, file_nm):
@@ -17,7 +17,9 @@ def download_file(link, file_nm):
         max_try = 10
         while not success and num_try <= max_try:
             # download file
-            os.system('curl "{0}" > {1}'.format(link, file_nm))
+            cmd = 'curl "{0}" > {1}'.format(link, file_nm)
+            # print('curl cmd:', cmd)
+            os.system(cmd)
             # is it there?
             if os.path.isfile(file_nm):
                 with open(file_nm, 'r') as f:
@@ -59,15 +61,15 @@ def get_fund_doc_link_by_cik(cik):
     response = requests.get(documents_url).text
     soup = BeautifulSoup(response, 'html.parser')
 
-    with open('soup.txt', 'w+') as out:
-        out.write(str(soup))
+    # with open('test_doc/soup_{0}.txt'.format(cik), 'w+') as out:
+    #     out.write(str(soup))
 
     # get the tables (the class names may be different between CIKs)
     tbl_class = ''
     tables = soup.findAll("table")
 
-    with open('table.txt', 'w+') as out:
-        out.write(str(tables))
+    # with open('test_doc/table_{0}.txt'.format(cik), 'w+') as out:
+    #     out.write(str(tables))
 
     for table in tables:
         if table.has_attr('class'):
@@ -107,12 +109,12 @@ def get_fund_doc_link_by_cik(cik):
 
             elif found:
                 # next cell contains documents link
-                #print('get link from:', td)
+                # print('get link from:', td)
                 # https://www.sec.gov/Archives/edgar/data/1166559/000110465918009713/0001104659-18-009713-index.htm
 
                 a = td.find('a')
                 if a is not None:
-                    link = 'https://www.sec.gov/{0}'.format(a['href'])
+                    link = 'https://www.sec.gov{0}'.format(a['href'])
                     # link = a['href']
                     # print(link)
                     return link
@@ -126,22 +128,70 @@ def get_fund_holdings(link):
     :param link: Link to fund holdings XML file
     :return:     Dictionary with fund holdings
     """
+    #
     # download fund holdings xml file
+    #
     path, file_nm = os.path.split(link)
     ret_sts = download_file(link, file_nm)
 
+    # return an empty list when unable to download xml file
+    if not ret_sts:
+        return []
+
+    # file_nm = 'a18-5576_1informationtable.xml'
+
+    tree = ElementTree.parse(file_nm)
+    root = tree.getroot()
+
+    # column names
+    header = ['nameOfIssuer',
+              'titleOfClass',
+              'cusip',
+              'value',
+              'sshPrnamt',
+              'sshPrnamtType',
+              'investmentDiscretion',
+              'Sole',
+              'Shared',
+              'None']
+
+    # these elements have additional info
+    sub_details = ['shrsOrPrnAmt', 'votingAuthority']
+
     # initialize return value
-    ret_val = {}
-    if ret_sts:
-        with open(file_nm) as fd:
-            ret_val = xmltodict.parse(fd.read())
+    result = [header]
 
-    print(ret_val)
+    # loop over all nodes in toot
+    for info_table in root:
+        # 1 row for each node
+        row = [''] * len(header)
 
-    return ret_val
+        # loop over all nodes
+        for detail in info_table:
+            # get tag name
+            pos = len(detail.tag) - detail.tag.rfind('}') - 1
+            tag_nm = detail.tag[-pos:]
+
+            # if the tag has additional details, get them
+            if tag_nm in sub_details:
+                for sd in detail:
+                    s_pos = len(sd.tag) - sd.tag.rfind('}') - 1
+                    s_tag_nm = sd.tag[-s_pos:]
+                    s_i = header.index(s_tag_nm)
+                    row[s_i] = sd.text
+
+            else:
+                # put value into row
+                i = header.index(tag_nm)
+                row[i] = detail.text
+
+        # add row to result
+        result.append(row)
+
+    return result
 
 
-def get_fund_holdings_by_name(name):
+def get_cik_from_name(name):
     """
     :param name: Company name to look up
     :return:     Dictionary containing fund information (holdings)
@@ -153,8 +203,7 @@ def get_fund_holdings_by_name(name):
                 line_parts = line.split(':')
                 if line_parts[0] == name:
                     cik = line_parts[1]
-                    docs_link = get_fund_doc_link_by_cik(cik)
-                    break
+                    return cik
     return ret_val
 
 
@@ -200,20 +249,13 @@ def get_fund_holdings_xml_link(link):
 
                 a = td.find('a')
                 if a is not None:
-                    link = 'https://www.sec.gov/{0}'.format(a['href'])
-                    if link[-3:] == 'xml':
+                    a_text = td.string
+                    link = 'https://www.sec.gov{0}'.format(a['href'])
+                    # print('link:', link)
+                    # print('text:', a_text)
+                    if link[-3:] == 'xml' and a_text[-3:] == 'xml':
                         # link = a['href']
                         # print(link)
                         return link
 
     return ''
-
-
-def xxx_soup():
-    response = requests.get('http://en.wikipedia.org/wiki/Roulette#Bet_odds_table').text
-    soup = BeautifulSoup(response, 'html.parser')
-
-    # there are 3 tables on this page with class name = 'wikitable'
-    wikiTables = soup.find_all('table', class_='wikitable')
-
-    # https://www.sec.gov/Archives/edgar/cik-lookup-data.txt
