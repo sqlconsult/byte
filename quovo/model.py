@@ -195,7 +195,6 @@ def set_current_limit(cur, acct_id, new_limit):
     #
 
     # build sql to update current limit
-    print(acct_id, new_limit)
     sql = 'UPDATE accounts SET current_limit = {current_limit} WHERE acct_id = {acct_id}'.\
         format(current_limit=new_limit, acct_id=acct_id)
 
