@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+DARK = 'dark'
+MILK = 'milk'
+SUGAR_FREE = 'sugar free'
+WHITE = 'white'
+
 
 def bonus_candy(candy_type):
     """
@@ -13,22 +18,22 @@ def bonus_candy(candy_type):
     dark = 0
 
     # for milk we give 1 milk + 1 sugar free
-    if candy_type == 'milk':
+    if candy_type == MILK:
         milk = 1
         sugar_free = 1
 
     # for white we give 1 white + 1 sugar free
-    if candy_type == 'white':
+    elif candy_type == WHITE:
         white = 1
         sugar_free = 1
 
     # for sugar free we give 1 sugar free + 1 dark
-    if candy_type == 'sugar free':
+    elif candy_type == SUGAR_FREE:
         sugar_free = 1
         dark = 1
 
     # for dark we give 1 dark
-    if candy_type == 'dark':
+    elif candy_type == DARK:
         dark = 1
 
     return dark, milk, sugar_free, white
@@ -44,18 +49,18 @@ def candy_math(cash, price, wrappers_needed_for_exch, candy_type):
     """
     # used wrappers by candy type
     cnt_used = {
-        'milk': 0,
-        'dark': 0,
-        'white': 0,
-        'sugar free': 0
+        MILK: 0,
+        DARK: 0,
+        WHITE: 0,
+        SUGAR_FREE: 0
     }
 
     # bonus wrappers by candy type
     cnt_bonus = {
-        'milk': 0,
-        'dark': 0,
-        'white': 0,
-        'sugar free': 0
+        MILK: 0,
+        DARK: 0,
+        WHITE: 0,
+        SUGAR_FREE: 0
     }
 
     # get initial number of candies they can buy
@@ -88,10 +93,10 @@ def candy_math(cash, price, wrappers_needed_for_exch, candy_type):
                 dark, milk, sugar_free, white = bonus_candy(candy_type)
 
                 # add bonus wrappers to our total wrappers
-                cnt_used['dark'] += dark
-                cnt_used['milk'] += milk
-                cnt_used['sugar free'] += sugar_free
-                cnt_used['white'] += white
+                cnt_used[DARK] += dark
+                cnt_used[MILK] += milk
+                cnt_used[SUGAR_FREE] += sugar_free
+                cnt_used[WHITE] += white
 
     # now that we are out of the loop, we have no more exchanges
     # so we use all remaining wrappers

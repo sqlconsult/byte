@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
+import os
 import unittest
-# from unittest.mock import patch
+from unittest.mock import patch
 from order import InputOrder
 import model
 
@@ -27,7 +28,7 @@ class TestRead(unittest.TestCase):
         #
         # read input file into dictionary of InputOrders
         #
-        self.file_nm = 'input/orders.csv'
+        self.file_nm = os.path.join('input', 'orders.csv')
         self.read_status, self.inp_orders, self.read_exception = model.read_file(self.file_nm)
 
     def tearDown(self):
@@ -52,6 +53,17 @@ class TestRead(unittest.TestCase):
         self.assertEqual(self.read_exception.args[0], 2)
         self.assertEqual(self.read_exception.args[1], 'No such file or directory')
 
+    def test_read_error(self):
+        print('TestRead: test_read_error')
+        file_nm = 'file_size_zero.txt'
+        os.system('touch {0}'.format(file_nm))
+        os.truncate(file_nm, 0)
+        read_status, inp_orders, read_exception = model.read_file(file_nm)
+
+        self.assertEqual(read_status, 3)
+        self.assertEqual(len(inp_orders), 0)
+        os.system('rm {0}'.format(file_nm))
+
     def test_validate_file(self):
         print('TestRead: test_validate_file')
         #
@@ -67,7 +79,7 @@ class TestRead(unittest.TestCase):
         #
         # these tests test invalid data is correctly caught
         #
-        fail_orders = {1: InputOrder('a', 'b', 'c', 'd')}
+        fail_orders = [InputOrder(1, 'a,b,c,d\n')]
         valid_orders, invalid_orders, validate_status, valid_exception = \
             model.validate_input_data(fail_orders)
         # No valid orders
@@ -77,13 +89,12 @@ class TestRead(unittest.TestCase):
         # Status == 0 (success)
         self.assertEqual(validate_status, 0)
         # Four errors
-        key = next(iter(invalid_orders))
-        self.assertEqual(len(invalid_orders[key].errors), 4)
+        self.assertEqual(len(invalid_orders[0].errors), 4)
 
-        self.assertEqual(invalid_orders[key].errors[0], 'Invalid cash amount [a]')
-        self.assertEqual(invalid_orders[key].errors[1], 'Invalid price [b]')
-        self.assertEqual(invalid_orders[key].errors[2], 'Invalid wrappers [c]')
-        self.assertEqual(invalid_orders[key].errors[3], 'Invalid candy type [d]')
+        self.assertEqual(invalid_orders[0].errors[0], 'Invalid cash amount [a]')
+        self.assertEqual(invalid_orders[0].errors[1], 'Invalid price [b]')
+        self.assertEqual(invalid_orders[0].errors[2], 'Invalid wrappers [c]')
+        self.assertEqual(invalid_orders[0].errors[3], 'Invalid candy type [d]')
 
 
 if __name__ == '__main__':

@@ -26,8 +26,7 @@ def read_file(file_path):
     :return: Dictionary of Input_Orders (strings) from input file
     """
     # initialize return list
-    ret_val = {}
-    line_num = 0
+    imported_orders = []
 
     try:
         # read input file
@@ -36,29 +35,20 @@ def read_file(file_path):
             next(f)
 
             # process 1 line at time
-            for line in f:
-                # parse input line
-                e = line.split(',')
-                line_num += 1
-                inp_cash = e[0]
-                inp_price = e[1]
-                inp_wrappers = e[2]
-                candy_tmp = e[3].lower().replace('\"', '')  # remove double quotes
-                candy_type = candy_tmp[:-1]                 # remove trailing newline  "\n"
+            for line_num, line in enumerate(f):
+                imported_order = InputOrder(line_num, line)
+                imported_orders.append(imported_order)
 
-                data = InputOrder(inp_cash, inp_price, inp_wrappers, candy_type)
-                ret_val[line_num] = data
-
-        return 0, ret_val, 0
+        return 0, imported_orders, 0
 
     except EOFError as ex:
-        return 1, ret_val, ex
+        return 1, imported_orders, ex
 
     except FileNotFoundError as ex:
-        return 2, ret_val, ex
+        return 2, imported_orders, ex
 
-    except RuntimeError as ex:
-        return 3, ret_val, ex
+    except StopIteration as ex:
+        return 3, imported_orders, ex
 
 
 def validate_input_data(inp_orders):
@@ -68,16 +58,18 @@ def validate_input_data(inp_orders):
                               2: invalid input lines - dictionary of Input_Errors (key = line number)
     """
     # initialize return value dictionaries
-    valid_lines = {}
-    invalid_lines = {}
+    valid_lines = []
+    invalid_lines = []
 
     try:
         # loop over all input lines
-        for line_num, order in inp_orders.items():
-            inp_cash = order.cash_avail
-            inp_price = order.price
-            inp_wrappers = order.wrappers_needed
-            candy_type = order.candy_type
+        for inp_order in inp_orders:
+            line_num = inp_order.line_num
+            line = inp_order.line
+            inp_cash = inp_order.cash_avail
+            inp_price = inp_order.price
+            inp_wrappers = inp_order.wrappers_needed
+            candy_type = inp_order.candy_type
 
             err_msgs = []
 
@@ -104,11 +96,15 @@ def validate_input_data(inp_orders):
 
             if valid:
                 if line_num not in valid_lines:
-                    valid_lines[line_num] = Order(int(inp_cash), int(inp_price), int(inp_wrappers), candy_type)
+                    tmp_order = Order(line_num,
+                                      int(inp_cash),
+                                      int(inp_price),
+                                      int(inp_wrappers),
+                                      candy_type)
+                    valid_lines.append(tmp_order)
             else:
-                if line_num not in invalid_lines:
-                    new_line = '|'.join([inp_cash, inp_price, inp_wrappers, candy_type])
-                    invalid_lines[line_num] = InputError(line_num, new_line, err_msgs)
+                tmp_err = InputError(line_num, line, err_msgs)
+                invalid_lines.append(tmp_err)
 
         return valid_lines, invalid_lines, 0, 0
 
@@ -127,30 +123,21 @@ def write_redemptions(redemptions_to_write, file_path):
     # initialize number of record written
     write_cnt = 0
 
-    try:
-        # output line template format
-        line_to_write_fmt = 'milk {milk},dark {dark},white {white},sugar free {sugar_free}'
+    # output line template format
+    line_to_write_fmt = 'milk {milk},dark {dark},white {white},sugar free {sugar_free}'
 
-        # open output file
-        with open(file_path, 'w+') as g:
-            # loop over each set of wrappers and write to output file
-            for redemption in redemptions_to_write:
-                output_line = line_to_write_fmt.format(milk=redemption['milk'],
-                                                       dark=redemption['dark'],
-                                                       white=redemption['white'],
-                                                       sugar_free=redemption['sugar_free'])
-                g.write(output_line)
-                # increment records written counter
-                write_cnt += 1
+    # open output file
+    with open(file_path, 'w+') as g:
+        # loop over each set of wrappers and write to output file
+        for redemption in redemptions_to_write:
+            output_line = line_to_write_fmt.format(milk=redemption['milk'],
+                                                   dark=redemption['dark'],
+                                                   white=redemption['white'],
+                                                   sugar_free=redemption['sugar_free'])
+            g.write(output_line)
+            # increment records written counter
+            write_cnt += 1
 
-        # return error code = 0, success status, no exception
-        return 0, write_cnt, 0
+    # return error code = 0, success status, no exception
+    return 0, write_cnt, 0
 
-    except EOFError as ex:
-        return 1, write_cnt, ex
-
-    except FileNotFoundError as ex:
-        return 2, write_cnt, ex
-
-    except RuntimeError as ex:
-        return 3, write_cnt, ex

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import os
+
 import candy
 import model
 import view
@@ -7,10 +9,10 @@ import view
 
 def main():
     # source input file path
-    input_file_name = 'input/orders.csv'
+    input_file_name = os.path.join('input', 'orders.csv')
 
     # target output file path
-    output_file_name = 'output/redemptions.csv'
+    output_file_name = os.path.join('output', 'redemptions.csv')
 
     # display app starting message to user
     app_name = __file__.split('.')[0]
@@ -23,7 +25,7 @@ def main():
     if read_error_code > 0:
         process_read_write_error(read_error_code, 'read', read_exception, input_file_name)
     else:
-        tot_cnt = len(inp_orders)
+        input_order_cnt = len(inp_orders)
         valid_orders, invalid_orders, validate_status, ex = model.validate_input_data(inp_orders)
 
         valid_cnt = len(valid_orders)
@@ -31,11 +33,11 @@ def main():
 
         if validate_status < 0:
             msg = 'RuntimeError occurred while validating input orders. {0} of {1} orders are invalid'.\
-                format(invalid_cnt, tot_cnt)
+                format(invalid_cnt, input_order_cnt)
             view.display_msg(msg)
 
         if valid_cnt > 0:
-            msg = '{0} of {1} orders are valid'.format(valid_cnt, tot_cnt)
+            msg = '{0} of {1} orders are valid'.format(valid_cnt, input_order_cnt)
             view.display_msg(msg)
 
             # calculate 1) number of wrappers they ordered + 2) number of bonus wrappers they earned
@@ -73,7 +75,7 @@ def process_read_write_error(error_code, action, exception, path):
     :return:           True
     """
     # Map error code to string
-    error_types = ['', 'EOFError', 'FileNotFoundError', 'RuntimeError']
+    error_types = ['', 'EOFError', 'FileNotFoundError', 'RuntimeError', 'StopIteration']
 
     # Build error message
     msg = '{error_type} occurred while {action}ing {path}.  Exception=[{exception}'.\

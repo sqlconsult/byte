@@ -32,6 +32,7 @@ class TestWrite(unittest.TestCase):
         #
         # test file exists write
         #
+        print('TestWrite: test_write_file')
         output_file_name = 'output/redemptions.csv'
         r1 = {'milk': 1, 'dark': 2, 'white': 3, 'sugar_free': 4}
         r2 = {'milk': 11, 'dark': 22, 'white': 33, 'sugar_free': 44}
@@ -57,9 +58,6 @@ class TestWrite(unittest.TestCase):
         self.assertEqual(write_error_code, 0)
         self.assertEqual(write_exception, 0)
         self.assertEqual(write_cnt, 4)
-
-    def test_wite_error(self):
-        pass
 
 
 if __name__ == '__main__':
