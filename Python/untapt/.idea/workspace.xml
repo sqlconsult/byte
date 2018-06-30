@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a1350dca-9787-44a4-b9fb-21e5d7ccdde2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../JavaScript30" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaScript30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edCache/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edCache/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../factorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fibonacci.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SteveGolub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SteveGolub/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TicTacToe-Flask" beforeDir="false" afterPath="$PROJECT_DIR$/../../TicTacToe-Flask" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../quovo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../quovo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../quovo/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../quovo/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../quovo/debit.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../quovo/debit.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../quovo/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../quovo/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../quovo/seed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../quovo/seed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/candy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/candy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/input_errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/input_errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/test_candy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/test_candy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/test_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/test_read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../stride/test_write.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../stride/test_write.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/week1-day2" beforeDir="false" afterPath="$PROJECT_DIR$/../../week1/week1-day2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/week1-day4" beforeDir="false" afterPath="$PROJECT_DIR$/../../week1/week1-day4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week2/week2-day1" beforeDir="false" afterPath="$PROJECT_DIR$/../../week2/week2-day1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week2/week2-day2" beforeDir="false" afterPath="$PROJECT_DIR$/../../week2/week2-day2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week2/week2-day3" beforeDir="false" afterPath="$PROJECT_DIR$/../../week2/week2-day3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week2/week2-day4" beforeDir="false" afterPath="$PROJECT_DIR$/../../week2/week2-day4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week2/week2-day5" beforeDir="false" afterPath="$PROJECT_DIR$/../../week2/week2-day5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/week3-day1" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/week3-day1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/week3-day2" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/week3-day2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/week3-day5" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/week3-day5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week5/week5-day1" beforeDir="false" afterPath="$PROJECT_DIR$/../../week5/week5-day1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week5/week5-day4" beforeDir="false" afterPath="$PROJECT_DIR$/../../week5/week5-day4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week5/week5-day5" beforeDir="false" afterPath="$PROJECT_DIR$/../../week5/week5-day5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week6/week6-day2/kt-dotfiles" beforeDir="false" afterPath="$PROJECT_DIR$/../../week6/week6-day2/kt-dotfiles" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week7/week7-day3" beforeDir="false" afterPath="$PROJECT_DIR$/../../week7/week7-day3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week8/week8-day1a" beforeDir="false" afterPath="$PROJECT_DIR$/../../week8/week8-day1a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week8/week8-day3" beforeDir="false" afterPath="$PROJECT_DIR$/../../week8/week8-day3" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="test.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rover.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rover.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constants.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/view.py" />
+        <option value="$PROJECT_DIR$/grid.py" />
+        <option value="$PROJECT_DIR$/test_grid.py" />
+        <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/run.sh" />
+        <option value="$PROJECT_DIR$/test_controller.py" />
+        <option value="$PROJECT_DIR$/test_rover.py" />
+        <option value="$PROJECT_DIR$/test_model.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/tech puzzle.txt" />
+        <option value="$PROJECT_DIR$/test.sh" />
+        <option value="$PROJECT_DIR$/controller.py" />
+        <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/constants.py" />
+        <option value="$PROJECT_DIR$/rover.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="98" />
+    <option name="y" value="39" />
+    <option name="width" value="1205" />
+    <option name="height" value="698" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="untapt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untapt" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1350dca-9787-44a4-b9fb-21e5d7ccdde2" name="Default" comment="" />
+      <created>1530293009303</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1530293009303</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="98" y="39" width="1205" height="698" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1526971" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="right" id="SciView" order="0" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="80" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="408">
+            <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tech puzzle.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_rover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding>
+            <element signature="e#24#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
