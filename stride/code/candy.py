@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-DARK = 'dark'
-MILK = 'milk'
-SUGAR_FREE = 'sugar free'
-WHITE = 'white'
+import constants
 
 
 def bonus_candy(candy_type):
@@ -18,28 +15,28 @@ def bonus_candy(candy_type):
     dark = 0
 
     # for milk we give 1 milk + 1 sugar free
-    if candy_type == MILK:
+    if candy_type == constants.MILK:
         milk = 1
         sugar_free = 1
 
     # for white we give 1 white + 1 sugar free
-    elif candy_type == WHITE:
+    elif candy_type == constants.WHITE:
         white = 1
         sugar_free = 1
 
     # for sugar free we give 1 sugar free + 1 dark
-    elif candy_type == SUGAR_FREE:
+    elif candy_type == constants.SUGAR_FREE:
         sugar_free = 1
         dark = 1
 
     # for dark we give 1 dark
-    elif candy_type == DARK:
+    elif candy_type == constants.DARK:
         dark = 1
 
     return dark, milk, sugar_free, white
 
 
-def candy_math(cash, price, wrappers_needed_for_exch, candy_type):
+def candy_calc(cash, price, wrappers_needed_for_exch, candy_type):
     """
     :param cash:        Cash amount to spend
     :param price:       Price for each chocolate
@@ -49,39 +46,39 @@ def candy_math(cash, price, wrappers_needed_for_exch, candy_type):
     """
     # used wrappers by candy type
     cnt_used = {
-        MILK: 0,
-        DARK: 0,
-        WHITE: 0,
-        SUGAR_FREE: 0
+        constants.MILK: 0,
+        constants.DARK: 0,
+        constants.WHITE: 0,
+        constants.SUGAR_FREE: 0
     }
 
     # bonus wrappers by candy type
     cnt_bonus = {
-        MILK: 0,
-        DARK: 0,
-        WHITE: 0,
-        SUGAR_FREE: 0
+        constants.MILK: 0,
+        constants.DARK: 0,
+        constants.WHITE: 0,
+        constants.SUGAR_FREE: 0
     }
 
     # get initial number of candies they can buy
     cnt_used[candy_type] = cash // price
 
     # initialize bonus candies found
-    flag = True
+    bonus_candy_found = True
 
     # loop until there are no more bonus candies available
     # a.k.a loop until no more candies can be earned
-    while flag:
+    while bonus_candy_found:
         # reset bonus candy found flag
-        flag = False
+        bonus_candy_found = False
         # iterate over wrappers, if we can exchange wrappers for more wrappers, then make the exchange
         for candy_type, num_wrappers in cnt_used.items():
             # check if we have enough wrappers to exchange for more candy
             if num_wrappers >= wrappers_needed_for_exch:
 
                 # If we make the exchange, we need to check in future if we can make more exchanges
-                # flag True will force loop to check again
-                flag = True
+                # bonus_candy_found True will force loop to check again
+                bonus_candy_found = True
 
                 # subtract the wrappers we are exchanging
                 cnt_used[candy_type] = num_wrappers - wrappers_needed_for_exch
@@ -93,10 +90,10 @@ def candy_math(cash, price, wrappers_needed_for_exch, candy_type):
                 dark, milk, sugar_free, white = bonus_candy(candy_type)
 
                 # add bonus wrappers to our total wrappers
-                cnt_used[DARK] += dark
-                cnt_used[MILK] += milk
-                cnt_used[SUGAR_FREE] += sugar_free
-                cnt_used[WHITE] += white
+                cnt_used[constants.DARK] += dark
+                cnt_used[constants.MILK] += milk
+                cnt_used[constants.SUGAR_FREE] += sugar_free
+                cnt_used[constants.WHITE] += white
 
     # now that we are out of the loop, we have no more exchanges
     # so we use all remaining wrappers

@@ -1,0 +1,6 @@
+1 - move test.py files in to a test directory (using __init__.py)
+
+2 - align comments
+
+3 - rename test case files to include their module name (ie controller, etc)
+
