@@ -43,6 +43,8 @@ def test_controller_write_file():
     for line_no, line in enumerate(file_content):
         assert line == expected_output[line_no]
 
+    os.system('rm -rf {0}'.format(output_file_name))
+
 
 def test_model_write_file():
     #
@@ -80,3 +82,5 @@ def test_model_write_file():
 
     for line_no, line in enumerate(file_content):
         assert line == expected_output[line_no]
+
+    os.system('rm -rf {0}'.format(output_file_name))
