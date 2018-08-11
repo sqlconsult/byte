@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 import os
 
-import constants
-import controller
-import model
+import constants as constants
+import controller as controller
+import model as model
 
 
 def test_controller_write_file():
     #
     # test file exists write
     #
-    file_dir = 'output'
+    file_dir = '../output'
     file_nm = 'test_controller_output.csv'
     output_file_name = os.path.join(file_dir, file_nm)
     r1 = {constants.MILK: 1, constants.DARK: 2, constants.WHITE: 3, constants.SUGAR_FREE: 4}
@@ -48,7 +48,7 @@ def test_model_write_file():
     #
     # test file exists write
     #
-    file_dir = 'output'
+    file_dir = '../output'
     file_nm = 'test_model_output.csv'
     output_file_name = os.path.join(file_dir, file_nm)
     r1 = {constants.MILK: 1, constants.DARK: 2, constants.WHITE: 3, constants.SUGAR_FREE: 4}

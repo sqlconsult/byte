@@ -29,8 +29,8 @@ def is_number(s, typ):
 def read_file(file_path):
     """
     :param file_path: Path to order file to read
-    :return:   1 - List of ValidOrders (can be length = 0)
-               2 - List of InvalidOrders (can be length = 0)
+    :return:          1 - List of ValidOrders (can be length = 0)
+                      2 - List of InvalidOrders (can be length = 0)
     """
     # initialize return lists
     valid_orders = []

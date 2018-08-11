@@ -10,8 +10,8 @@ import view
 def display_invalid_orders(invalid_orders):
     """
     Display invalid input orders
-    :param invalid_orders: List of InvalidOrders with error messages to display
-    :return:  True
+    :param invalid_orders:  List of InvalidOrders with error messages to display
+    :return:                True
     """
     for invalid_order in invalid_orders:
         err_msg = 'Line nuumber: {line_num}    Line: {line}'. \
@@ -63,9 +63,9 @@ def main():
     :return:
     """
     # set & validate input parameters
-    input_params = {'input_dir': 'input',
+    input_params = {'input_dir': '../input',
                     'input_file': 'orders.csv',
-                    'output_dir': 'output',
+                    'output_dir': '../output',
                     'output_file': 'redemptions.csv',
                     'input_file_path': '',
                     'output_file_path': '',
@@ -106,8 +106,8 @@ def process_valid_orders(valid_orders):
     """
     Takes a valid orders, processes and writes to output file
     :param valid_orders: List of valid input orders to process
-    :return: List of dictionaries to write.  1 dictionary for each order.  Each dictionary contains the
-             number of dark, milk, sugar free and white wrappers to write
+    :return:             List of dictionaries to write.  1 dictionary for each order.  Each dictionary contains the
+                         number of dark, milk, sugar free and white wrappers to write
     """
     # calculate 1) number of wrappers they ordered + 2) number of bonus wrappers they earned
     orders_to_write = []
@@ -123,9 +123,11 @@ def process_valid_orders(valid_orders):
 
 def read_order_file(input_file_name):
     """
-    Reads input file into lists of valid (ValidOrder) & invalid (InvalidOrder) orders
-    :param input_file_name:
-    :return:
+    Reads input order file invalid (InvalidOrder) orders
+    :param input_file_name: Path to orders input file
+    :return:                1 - list of valid orders (ValidOrder)
+                            2 - list of invalid orders (InvalidOrder)
+                            3 - read_successful True if reading file is successful, else False
     """
     # read & validate orders file (valid_orders and/or invalid_orders may be length = 0)
     valid_orders = []
@@ -159,10 +161,10 @@ def read_order_file(input_file_name):
 def write_output_orders_file(orders_to_write, output_file_name):
     """
     Writes final orders file
-    :param orders_to_write:         List of dictionaries to write.  1 dictionary for each order.  Each dictionary
-                                    contains the number of dark, milk, sugar free and white wrappers to write
-    :param output_file_name:        Path to output file
-    :return:                        Number of lines written or zero on error
+    :param orders_to_write:   List of dictionaries to write.  1 dictionary for each order.  Each dictionary
+                              contains the number of dark, milk, sugar free and white wrappers to write
+    :param output_file_name:  Path to output file
+    :return:                  Number of lines written or zero on error
     """
     written_order_cnt = 0
     try:

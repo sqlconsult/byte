@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import model
+import model as model
 
 
 def test_int():

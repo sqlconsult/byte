@@ -38,11 +38,11 @@ def bonus_candy(candy_type):
 
 def candy_calc(cash, price, wrappers_needed_for_exch, candy_type):
     """
-    :param cash:        Cash amount to spend
-    :param price:       Price for each chocolate
+    :param cash:                        Cash amount to spend
+    :param price:                       Price for each chocolate
     :param wrappers_needed_for_exch:    # of wrappers needed for a bonus
-    :param candy_type:  Chocolate type { 'milk', 'white', 'sugar free', 'dark' }
-    :return:            Final number of milk, white, sugar free and dark chocolates
+    :param candy_type:                  Chocolate type { 'milk', 'white', 'sugar free', 'dark' }
+    :return:                            Final number of milk, white, sugar free and dark chocolates
     """
     # used wrappers by candy type
     cnt_used = {

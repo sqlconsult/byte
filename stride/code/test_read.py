@@ -3,17 +3,17 @@
 import os
 import pytest
 
-import constants
-import controller
-import model
-import order
+import constants as constants
+import controller as controller
+import model as model
+import order as order
 
 
 def test_controller_read_order_file():
     #
     # test successful read file
     #
-    input_file_name = os.path.join('input', 'orders.csv')
+    input_file_name = os.path.join('../input', 'orders.csv')
     valid_orders, invalid_orders, read_successful = controller.read_order_file(input_file_name)
     assert len(valid_orders) == 4
     assert len(invalid_orders) == 0
@@ -21,7 +21,7 @@ def test_controller_read_order_file():
     #
     # test missing file exception is handled
     #
-    input_file_name = 'input/orders_xxx.csv'
+    input_file_name = '../input/orders_xxx.csv'
     valid_orders, invalid_orders, read_successful = controller.read_order_file(input_file_name)
     assert len(valid_orders) == 0
     assert len(invalid_orders) == 0
@@ -43,14 +43,14 @@ def test_model_read_file():
     #
     # test successful read file
     #
-    input_file_name = os.path.join('input', 'orders.csv')
+    input_file_name = os.path.join('../input', 'orders.csv')
     valid_orders, invalid_orders = model.read_file(input_file_name)
     assert len(valid_orders) == 4
     assert len(invalid_orders) == 0
     #
     # test missing file exception is raised
     #
-    input_file_name = os.path.join('input', 'orders_xxx.csv')
+    input_file_name = os.path.join('../input', 'orders_xxx.csv')
     pytest.raises(FileNotFoundError, model.read_file, input_file_name)
     #
     # test zero length file exception is raised

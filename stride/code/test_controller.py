@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import constants
-import controller
-import model
-import order
+import constants as constants
+import controller as controller
+import model as model
+import order as order
 
 
 def test_display_invalid_orders():
